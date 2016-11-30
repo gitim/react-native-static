@@ -1,6 +1,4 @@
-import React, {Component} from 'react';
-import {Image, Text, View} from 'react-native';
-
+import ReactNative from 'react-native';
 
 export function createStaticComponent(BaseComponent) {
     const className = `Static${BaseComponent.name || BaseComponent.displayName}`;
@@ -17,6 +15,6 @@ export function createStaticComponent(BaseComponent) {
     )(BaseComponent);
 }
 
-export const StaticText = createStaticComponent(Text);
-export const StaticView = createStaticComponent(View);
-export const StaticImage = createStaticComponent(Image);
+export const Text = createStaticComponent(ReactNative.Text);
+export const View = createStaticComponent(ReactNative.View);
+export const Image = createStaticComponent(ReactNative.Image);

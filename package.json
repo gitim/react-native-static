@@ -1,0 +1,24 @@
+{
+  "name": "react-native-static",
+  "version": "0.0.1",
+  "description": "React Native static components",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gitim/react-native-static.git"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "react-component",
+    "static-component",
+    "fast-component"
+  ],
+  "author": "Tim Gibadullin <tim.gibadullin@gmail.com> (https://github.com/gitim)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gitim/react-native-static/issues"
+  },
+  "homepage": "https://github.com/gitim/react-native-static"
+}

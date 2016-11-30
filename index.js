@@ -3,7 +3,7 @@ import {Image, Text, View} from 'react-native';
 
 
 export function createStaticComponent(BaseComponent) {
-    const className = `Static${BaseComponent.name}`;
+    const className = `Static${BaseComponent.name || BaseComponent.displayName}`;
 
     return new Function(
         'BaseComponent',
@@ -12,7 +12,7 @@ export function createStaticComponent(BaseComponent) {
                 return false;
             }
         };
-        ${className}.displayName = 'Static${BaseComponent.displayName}';
+        ${className}.displayName = '${className}';
         return ${className};`
     )(BaseComponent);
 }

@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git@github.com:gitim/react-native-static.git"
   },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
   "keywords": [
     "react-native",
     "ios",

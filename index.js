@@ -9,7 +9,7 @@ export function createStaticComponent(BaseComponent) {
             shouldComponentUpdate() {
                 return false;
             }
-        };
+        }
         ${className}.displayName = '${className}';
         return ${className};`
     )(BaseComponent);

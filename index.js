@@ -5,11 +5,19 @@ export function createStaticComponent(BaseComponent) {
 
     return new Function(
         'BaseComponent',
-        `class ${className} extends BaseComponent {
-            shouldComponentUpdate() {
-                return false;
-            }
-        }
+        `function ${className}() {}
+        ${className}.prototype = Object.create(BaseComponent.prototype, {
+            constructor: {
+                value: ${className},
+                enumerable: false,
+                writable: true,
+                configurable: true,
+            },
+        });
+        ${className}.__proto__ = BaseComponent;
+        ${className}.prototype.shouldComponentUpdate = function () {
+            return false;
+        };
         ${className}.displayName = '${className}';
         return ${className};`
     )(BaseComponent);
